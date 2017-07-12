@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Hi I'm so high</title>
+	<script src="https://unpkg.com/react@latest/dist/react.js"></script>
+	<script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+	<div id="root"></div>
+	<p><strong>componentWillMount -</strong> Invoked once before the initial render. If you were to call setState here, no re-render would be invoked. An example of this would be if you’re using a service like firebase, you’d set up your reference to your firebase database here since it’s only invoked once on the initial render.</p>
+	<p><strong>componentDidMount -</strong> Invoked once after the initial render. Because the component has already been invoked when this method is invoked, you have access to the virtual DOM if you need it. You do that by calling this.getDOMNode(). Now it might seem like if you wanted to make AJAX requests you would do that in componentWillMount, but the devs at facebook actually recommend you do that in componentDidMount. So this is the lifecycle event where you’ll be making your AJAX requests to fetch some data.</p>
+	<p><strong>componentWillReceiveProps -</strong> This life cycle is not called on the initial render, but is instead called whenever there is a change to props. Use this method as a way to react to a prop change before render() is called by updating the state with setState.</p>
+	<p><strong>componentWillUnmount -</strong> This life cycle is invoked immediately before a component is unmounted from the DOM. This is where you can do necessary clean up. For example, going back to our firebase example this is the life cycle event where you would clean up your firebase reference you set in componentWillMount.</p>
+	<p>There are a few more life cycle methods, but the ones I’ve covered are the ones that I’ve seen which are the most useful.</p>
+
+<script type="text/babel" src="sohigh4.js"></script>
+</body>
+</html>
+
