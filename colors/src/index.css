@@ -1,0 +1,15 @@
+html,body {
+	display: flex;
+	justify-content: center;
+}
+section #pow {
+	margin-top: 36px;
+	padding-botton: 36px;
+        display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 500px;	
+}
+.blue {
+	color: blue;
+}
